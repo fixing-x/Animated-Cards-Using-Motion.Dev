@@ -4,62 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Card & Button Animation</title>
-  <style>
-    :root {
-      --bg2: #f8f8f8;
-      --button-color: #ffffff;
-      --button-border-color: #000000;
-      --cardHeight: 250px;
-        --cardWidth: 200px;
-        user-select: none;
-    }
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: var(--bg2);
-      flex-direction: column;
-      gap: 50px;
-    }
-
-    .cards {
-      display: flex;
-      gap: 20px;
-      width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .card {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      width: var(--cardWidth);
-      height: var(--cardHeight);
-      background-color: var(--button-color);
-      border: 1px solid var(--button-border-color);
-      border-radius: 0px;
-      /* padding-bottom: 20px; */
-      font-weight: bold;
-      cursor: pointer;
-      position: relative;
-    }
-    .shadow {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      width: var(--cardWidth);
-      height: var(--cardHeight);
-      background: rgba(0, 0, 0, 1);
-      z-index: -1;
-    }
-    .container {
-      position: relative;
-    }
-  </style>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js"></script>
 </head>
 <body>
+    <!-- title & subtitle -->
+    <header>
+        <h1>Marketing Analytics Examples</h1>
+        <p>Here are three real-world examples of marketing analytics models in action: </p>
+    </header>
+
   <!-- Cards -->
   <div class="cards">
     <div class="container">
@@ -75,23 +29,10 @@
       <div class="shadow"></div>
     </div>
   </div>
-
-  <script type="module">
-    import { animate, press } from "https://cdn.jsdelivr.net/npm/motion@12.23.12/+esm";
-
-    // Reusable press animation
-    function addPressAnimation(element) {
-      press(element, () => {
-        animate(element, { x: 10, y: 10 }, { duration: 0.1 });
-        return () => animate(element, { x: 0, y: 0 }, { duration: 0.1 });
-      });
-    }
-
-    // Apply to all cards
-    document.querySelectorAll('.card').forEach(addPressAnimation);
-
-    // Apply to button
-    addPressAnimation(document.getElementById('animatedButton'));
-  </script>
+  <!-- footer -->
+    <footer>
+         <p>Created by <a href="http://bento.me/fixingx" target="_blank">Ajay Sharma</a> | See  <a href="https://www.figma.com/design/45YyBg7tPKQ0myFayFn8bG/Daily-Practice?node-id=3478-3216&t=v90Ca4QoQU5xlt7L-4" target="_blank">Figma File & Prototype</a></p>
+    </footer>
 </body>
+
 </html>

@@ -1,0 +1,98 @@
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+    :root {
+        --bg2: #f8f8f8;
+        --button-color: #ffffff;
+        --button-border-color: #000000;
+        --cardHeight: 250px;
+        --cardWidth: 200px;
+        user-select: none;
+
+
+
+    }
+
+    * {
+        font-family: 'Inter', sans-serif;
+    }
+
+    h2 {
+        font-weight: 600;
+        color: #333;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: var(--bg2);
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    .cards {
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: var(--cardWidth);
+        height: var(--cardHeight);
+        background-color: var(--button-color);
+        border: 1px solid var(--button-border-color);
+        border-radius: 0px;
+        /* padding-bottom: 20px; */
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .shadow {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: var(--cardWidth);
+        height: var(--cardHeight);
+        background: rgba(0, 0, 0, 1);
+        z-index: -1;
+    }
+
+    .container {
+        position: relative;
+    }
+
+    /* place footer on bottom of page */
+    footer {
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        color: #555;
+    }
+
+    footer a {
+        color: #062092;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
