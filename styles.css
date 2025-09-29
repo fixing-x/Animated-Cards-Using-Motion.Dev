@@ -7,9 +7,7 @@
         --cardHeight: 250px;
         --cardWidth: 200px;
         user-select: none;
-
-
-
+        --Bbradius: 2px;
     }
 
     * {
@@ -19,6 +17,7 @@
     h2 {
         font-weight: 600;
         color: #333;
+        margin: 0;
     }
 
    /* reset */
@@ -59,21 +58,30 @@
         width: 100%;
         justify-content: center;
         flex-wrap: wrap;
+        background-image: url(bg.mp4);
     }
 
     .card {
         display: flex;
-        align-items: flex-end;
-        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
         width: var(--cardWidth);
         height: var(--cardHeight);
         background-color: var(--button-color);
         border: 1px solid var(--button-border-color);
-        border-radius: 0px;
-        /* padding-bottom: 20px; */
+        border-radius: var(--Bbradius);
+        padding:10px 0px;
         font-weight: bold;
         cursor: pointer;
         position: relative;
+    }
+    #cardImage {
+        display: block;
+        width: calc(var(--cardWidth) - 20px);
+        height: calc(var(--cardWidth) - 20px);
+        object-fit: cover;
+        border-radius: calc(var(--Bbradius) - 5px);
     }
 
     .shadow {
@@ -84,6 +92,7 @@
         height: var(--cardHeight);
         background: rgba(0, 0, 0, 1);
         z-index: -1;
+        border-radius: var(--Bbradius);
     }
 
     .container {
