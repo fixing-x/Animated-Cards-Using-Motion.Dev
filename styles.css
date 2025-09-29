@@ -21,15 +21,27 @@
         color: #333;
     }
 
+   /* reset */
+  *,*::before,*::after{box-sizing:border-box}
+  html,body,#root{height:100%}
+  body{margin:0}
+
+  /* SPA layout */
+  #root{
+    display:flex;
+    flex-direction:column;
+    min-height:100%;       /* fallback if you prefer percent-based */
+  }
+
     body {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        height: 100vh;
         margin: 0;
         background-color: var(--bg2);
         flex-direction: column;
         gap: 50px;
+        padding: 40px 20px 20px 20px;
     }
 
     header {
@@ -80,8 +92,8 @@
 
     /* place footer on bottom of page */
     footer {
-        position: absolute;
-        bottom: 0;
+        /* position: absolute;
+        bottom: 0; */
         text-align: center;
         margin-top: 20px;
         font-size: 14px;
