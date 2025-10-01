@@ -26,11 +26,6 @@
   body{margin:0}
 
   /* SPA layout */
-  #root{
-    display:flex;
-    flex-direction:column;
-    min-height:100%;       /* fallback if you prefer percent-based */
-  }
 
     body {
         display: flex;
